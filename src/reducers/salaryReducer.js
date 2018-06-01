@@ -1,6 +1,5 @@
 const initialState = {
     result: 25000,
-    init: 0,
     value: []
 }
 
@@ -10,7 +9,6 @@ const salaryReducer = (state = initialState, action) => {
             state = {
                 ...state,
                 result: state.result += action.payload,
-                init: state.init,
                 value: [
                     ...state.value,
                     action.payload
@@ -21,7 +19,6 @@ const salaryReducer = (state = initialState, action) => {
         state = {
             ...state,
             result: state.result -= action.payload,
-            init: state.init,
             value: [
                 ...state.value,
                 action.payload
